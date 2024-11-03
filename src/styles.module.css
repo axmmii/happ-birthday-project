@@ -1,0 +1,149 @@
+.container {
+    background: linear-gradient(135deg, 
+        rgba(255, 182, 193, 0.6), /* Light Pink */
+        rgba(255, 218, 185, 0.6), /* Light Peach */
+        rgba(255, 255, 224, 0.6), /* Light Yellow */
+        rgba(144, 238, 144, 0.6), /* Light Green */
+        rgba(173, 216, 230, 0.6), /* Light Blue */
+        rgba(218, 112, 214, 0.6), /* Light Violet */
+        rgba(255, 182, 193, 0.6)  /* Light Pink */
+    );
+    cursor: url('https://uploads.codesandbox.io/uploads/user/b3e56831-8b98-4fee-b941-0e27f39883ab/Ad1_-cursor.png') 39 39, auto;
+    display: flex;
+    align-items: center;
+    height: 100%;
+    justify-content: center;
+}
+  
+  .deck {
+    position: absolute;
+    width: 300px;
+    height: 200px;
+    will-change: transform;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    touch-action: none;
+  }
+  
+  .deck > div {
+    background-color: white;
+    background-size: auto 85%;
+    background-repeat: no-repeat;
+    background-position: center center;
+    width: 45vh;
+    max-width: 150px;
+    height: 85vh;
+    max-height: 285px;
+    will-change: transform;
+    border-radius: 10px;
+    box-shadow: 0 12.5px 100px -10px rgba(50, 50, 73, 0.4), 0 10px 10px -10px rgba(50, 50, 73, 0.3);
+  }
+
+  .card {
+    width: 400px; /* ปรับขนาดตามที่ต้องการ */
+    height: 600px; /* ปรับขนาดตามที่ต้องการ */
+    border-radius: 10px; /* รูปร่างการ์ด */
+    cursor: grab; /* เปลี่ยนเคอร์เซอร์ */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* เพิ่มเงา */
+}
+@import url("https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Mali:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Dosis:wght@200..800&display=swa&p");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+    margin: 0;
+    font-family: "Dosis", "Mali", "Kanit", sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+    font-family: "Dosis", "Mali", "Kanit", monospace;
+}
+
+/* aura background */
+.aura {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(176, 176, 176, 0.5);
+    background-size: 300% 300%;
+    animation: aurora-gradient 20s ease infinite;
+    z-index: -1;
+}
+
+@keyframes aurora-gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* modal */
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.4s ease-in-out, visibility 0.4s ease-in-out;
+}
+
+.modal.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+.modal-content {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-image {
+    max-width: 80%;
+    max-height: 80%;
+    border: none; /* Ensure no border */
+    outline: none; /* Remove outline */
+    padding: 0; /* Reset padding */
+    margin: 0; /* Reset margin */
+    display: block; /* Make sure image does not act like an inline element */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Optional: shadow */
+    transition: transform 0.3s ease-in-out;
+}
+
+.modal-image:hover {
+    transform: scale(1.05); /* Small zoom-in effect */
+}
+.modal-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.modal-image {
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 10px;
+}
