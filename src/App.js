@@ -10,10 +10,11 @@ import img1 from './assets/images/5.jpg';
 import img2 from './assets/images/4.jpg';
 import img3 from './assets/images/1.jpg';
 import img4 from './assets/images/3.jpg';
+import img5 from './assets/images/2.jpg';
 import billieAudio from './assets/images/pixxel.mp3';
 import { PlayIcon, PauseIcon } from '@heroicons/react/20/solid';
 import { _messages, _birthdayMessages } from "./assets/mock/mock";
-const images = [img1, img2, img3]; 
+const images = [img1, img2, img3, img5]; 
 
 // Helper functions for animation
 const to = (i) => ({ x: 0, y: i * -4, scale: 1, rot: -10 + Math.random() * 20, delay: i * 100 });
@@ -116,26 +117,26 @@ export default function App() {
     <div className={styles.container}>
       {!audioStarted && (
         <div className="fixed inset-0 bg-black bg-opacity-70 flex items-center justify-center z-50">
-          <button onClick={startAudio} className="bg-cyan-500 text-white px-4 py-2 rounded-lg text-xl">
+          <button onClick={startAudio} className="bg-pink-500 text-white px-4 py-2 rounded-lg text-xl">
             กดเพื่อดูความน่ารักได้ที่ปุ่มนี้!!
           </button>
         </div>
       )}
        
-      <div className="flex flex-col items-center max-w-[450px] py-12 gap-16 relative">
+      <div className="flex flex-col items-center max-w-[450px] py-12 gap-28 relative">
         
-        <Header content={{ title: "สุขสันต์วันเกิด", subtitle: "Meimei🎉" , className:"mb-[200px]" }} />
+        <Header content={{ title: "Happy Valentine's Day", subtitle: "Maple🌹" , className:"mb-[200px]" }} />
         
        
         <div className='mb-[250px] '>
         <Deck />
         </div>
-       
+       <div className="text-pink-500 text-3xl  text-center font-medium w-[350px] text-wrap font-['Kanit'] mt-[110px]">เพลงที่ทำให้เราได้เจอกัน</div>
         <div className="music-player bg-gray-900 rounded-2xl p-4 text-center shadow-lg w-60 mx-auto h-[500px]">
   <img src={img4} alt="Album Cover" className="rounded-lg mb-4 w-[300px] h-[250px]" />
-  <div className="text-gray-400 text-xs">Meimei 🎧</div>
-  <h2 className="text-white text-lg font-semibold mt-2">เพลงประจำวัน</h2>
-  <p className="text-gray-400 mb-4">PiXXiE</p>
+  <div className="text-gray-400 text-xs">Maple 🎧</div>
+  <h2 className="text-white text-lg font-semibold mt-2">อยากให้เธอลอง</h2>
+  <p className="text-gray-400 mb-4">Musketeers</p>
   
   <div className="flex items-center justify-center mb-4">
     <button onClick={toggleAudio} className="text-white">

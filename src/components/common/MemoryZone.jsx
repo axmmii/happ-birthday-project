@@ -10,7 +10,8 @@ const MemoryZone = forwardRef(({ isInView, data }, ref) => (
         transition={{ duration: 0.2 }}
         className="flex flex-col gap-6"
     >
-        <div className="text-6xl pt-6 font-extrabold text-[#f78da4]">
+        <div className="text-4xl pt-10 pl-4 font-extrabold text-[#f78da4]">
+            
             Memories Zone 📸
         </div>
 
